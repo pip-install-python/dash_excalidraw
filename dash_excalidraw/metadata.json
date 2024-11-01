@@ -1,0 +1,329 @@
+{
+  "src/lib/components/DashExcalidraw.react.js": {
+    "description": "DashExcalidraw is a Dash component that wraps the Excalidraw drawing tool.\nIt provides a customizable canvas for creating diagrams and sketches.",
+    "displayName": "DashExcalidraw",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      },
+      "width": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The width of the Excalidraw component.",
+        "defaultValue": {
+          "value": "'100%'",
+          "computed": false
+        }
+      },
+      "height": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The height of the Excalidraw component.",
+        "defaultValue": {
+          "value": "'400px'",
+          "computed": false
+        }
+      },
+      "initialData": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "elements": {
+              "name": "array",
+              "required": false
+            },
+            "appState": {
+              "name": "object",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Initial data to load into the Excalidraw component.",
+        "defaultValue": {
+          "value": "{ elements: [], appState: {} }",
+          "computed": false
+        }
+      },
+      "elements": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "The current elements in the Excalidraw scene."
+      },
+      "appState": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The current application state of Excalidraw."
+      },
+      "files": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Files associated with the Excalidraw scene."
+      },
+      "serializedData": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Serialized data of the entire Excalidraw scene."
+      },
+      "excalidrawAPI": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback to access the Excalidraw API."
+      },
+      "isCollaborating": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Indicates if the component is in collaboration mode.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "onPointerUpdate": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback triggered on pointer update."
+      },
+      "onPointerDown": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback triggered on pointer down event."
+      },
+      "onScrollChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback triggered on scroll change."
+      },
+      "onPaste": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback triggered on paste event."
+      },
+      "onLibraryChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback triggered when the library changes."
+      },
+      "onLinkOpen": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback triggered when a link is opened."
+      },
+      "langCode": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The language code for localization."
+      },
+      "renderTopRightUI": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to render custom UI in the top right corner."
+      },
+      "renderCustomStats": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to render custom stats."
+      },
+      "viewModeEnabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Enables view-only mode.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "zenModeEnabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Enables zen mode.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "gridModeEnabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Enables grid mode.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "libraryReturnUrl": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "URL to return to after using the library."
+      },
+      "theme": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"light\"",
+              "computed": false
+            },
+            {
+              "value": "\"dark\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The theme of the Excalidraw component.",
+        "defaultValue": {
+          "value": "\"light\"",
+          "computed": false
+        }
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Name of the drawing."
+      },
+      "UIOptions": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "UI options for customizing the Excalidraw interface."
+      },
+      "detectScroll": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Determines whether to detect scroll events.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "handleKeyboardGlobally": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Determines whether to handle keyboard events globally.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "autoFocus": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Determines whether to auto-focus the Excalidraw component.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "generateIdForFile": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to generate ID for files."
+      },
+      "validateEmbeddable": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "bool"
+            },
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "string"
+              }
+            },
+            {
+              "name": "instanceOf",
+              "value": "RegExp"
+            },
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "instanceOf",
+                "value": "RegExp"
+              }
+            },
+            {
+              "name": "func"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Function or value to validate embeddable content."
+      },
+      "renderEmbeddable": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function to render embeddable content."
+      }
+    }
+  }
+}

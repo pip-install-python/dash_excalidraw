@@ -1,0 +1,11 @@
+include dash_excalidraw/dash_excalidraw.min.js
+include dash_excalidraw/dash_excalidraw.min.js.map
+include dash_excalidraw/async-*.js
+include dash_excalidraw/async-*.js.map
+include dash_excalidraw/*-shared.js
+include dash_excalidraw/*-shared.js.map
+include dash_excalidraw/metadata.json
+include dash_excalidraw/package-info.json
+include README.md
+include LICENSE
+include package.json
