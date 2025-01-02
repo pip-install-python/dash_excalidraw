@@ -1,6 +1,6 @@
 Package: dashExcalidraw
 Title: excalidraw interactive drawing and freeform component for dash.
-Version: 0.0.3
+Version: 0.0.4
 Description: excalidraw interactive drawing and freeform component for dash.
 Depends: R (>= 3.0.2)
 Imports: 

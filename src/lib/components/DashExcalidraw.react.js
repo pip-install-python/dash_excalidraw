@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Excalidraw } from "@excalidraw/excalidraw";
 
@@ -10,6 +10,8 @@ const DashExcalidraw = (props) => {
     if (typeof window === "undefined") {
         return null;
     }
+
+    const excalidrawRef = useRef(null);
 
     const {
         id,
@@ -74,15 +76,26 @@ const DashExcalidraw = (props) => {
         });
     };
 
+    useEffect(() => {
+        if (excalidrawRef.current) {
+            // Create a function that wraps the API
+            const apiFunction = (callback) => {
+                if (callback && typeof callback === 'function') {
+                    callback(excalidrawRef.current);
+                }
+                return excalidrawRef.current;
+            };
+
+            setProps({ excalidrawAPI: apiFunction });
+        }
+    }, [excalidrawRef.current, setProps]);
+
     return (
         <div id={id} style={{ width, height }}>
             <Excalidraw
+                ref={excalidrawRef}
                 initialData={initialData}
                 onChange={onChange}
-                excalidrawAPI={(api) => {
-                    if (excalidrawAPI) {excalidrawAPI(api);}
-                    setProps({ excalidrawAPI: api });
-                }}
                 isCollaborating={isCollaborating}
                 onPointerUpdate={onPointerUpdate}
                 onPointerDown={onPointerDown}
@@ -109,7 +122,7 @@ const DashExcalidraw = (props) => {
             />
         </div>
     );
-}
+};
 
 DashExcalidraw.defaultProps = {
     width: '100%',
@@ -301,6 +314,5 @@ DashExcalidraw.propTypes = {
      */
     renderEmbeddable: PropTypes.func
 };
-
 
 export default DashExcalidraw;

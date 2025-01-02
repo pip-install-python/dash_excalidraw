@@ -1,6 +1,6 @@
 {
   "name": "dash_excalidraw",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "excalidraw interactive drawing and freeform component for dash.",
   "main": "build/index.js",
   "scripts": {

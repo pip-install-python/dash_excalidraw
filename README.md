@@ -35,7 +35,7 @@ The Dash Excalidraw component inherits all the powerful features of the Excalidr
 ## Installation
 
 ```bash
-pip install dash-excalidraw
+pip install dash-excalidraw==0.0.4
 ```
 
 ## Quick Start
